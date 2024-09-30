@@ -1,3 +1,4 @@
+main :: IO ()
 main = putStrLn myhtml
 
 myhtml :: String

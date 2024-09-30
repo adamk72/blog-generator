@@ -1,14 +1,11 @@
+-- Convert.hs
 module Convert where
 
 import qualified Markup
 import qualified Html
-import qualified Html.Internal as HI
 
-concatStructure :: Markup.Document -> [Html.Structure]
-concatStructure list =
-  case list of 
-    [] -> empty_
-    x:xs -> x <> concatStructure xs
+convert :: Html.Title -> Markup.Document -> Html.Html
+convert title = Html.html_ title . foldMap convertStructure
 
 convertStructure :: Markup.Structure -> Html.Structure
 convertStructure structure =

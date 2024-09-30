@@ -21,7 +21,6 @@ data Structure
   | CodeBlock [String]
   deriving (Eq, Show)    -- (1)
 
-
 parse :: String -> Document
 parse = parseLines Nothing . lines
 

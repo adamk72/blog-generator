@@ -1,5 +1,7 @@
 module Html.Internal where
 
+import Numeric.Natural
+
 -- * Types
 
 newtype Html
@@ -28,8 +30,8 @@ p_ = Structure . el "p" . escape
 code_ :: String -> Structure
 code_ = Structure . el "pre" . escape
 
-h1_ :: String -> Structure
-h1_ = Structure . el "h1" . escape
+h_ :: Natural -> String -> Structure
+h_ n = Structure . el ("h" <> show n) . escape
 
 ul_ :: [Structure] -> Structure
 ul_ = Structure . el "ul" . concat . map ( el "li" . getStructureString)

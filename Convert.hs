@@ -7,8 +7,8 @@ import qualified Html.Internal as HI
 convertStructure :: Markup.Structure -> Html.Structure
 convertStructure structure =
   case structure of
-    Markup.Heading 1 txt ->
-      Html.h1_ txt
+    Markup.Heading n txt ->
+      Html.h_ n txt
 
     Markup.Paragraph p ->
       Html.p_ p

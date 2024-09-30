@@ -24,6 +24,9 @@ html_ title content =
       )
     )
 
+empty_ :: Structure
+empty_ = Structure ""
+
 p_ :: String -> Structure
 p_ = Structure . el "p" . escape
 

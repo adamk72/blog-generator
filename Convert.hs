@@ -4,6 +4,12 @@ import qualified Markup
 import qualified Html
 import qualified Html.Internal as HI
 
+concatStructure :: Markup.Document -> [Html.Structure]
+concatStructure list =
+  case list of 
+    [] -> empty_
+    x:xs -> x <> concatStructure xs
+
 convertStructure :: Markup.Structure -> Html.Structure
 convertStructure structure =
   case structure of

@@ -3,6 +3,8 @@
     "myhtml",
     "txts"
     "ansicolor",
-    "cond"
+    "cond",
+    "metavar",
+    "subparser"
   ]
 }

@@ -5,6 +5,7 @@
     "ansicolor",
     "cond",
     "metavar",
-    "subparser"
+    "subparser",
+    "Stylesheet"
   ]
 }
